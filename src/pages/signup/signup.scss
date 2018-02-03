@@ -1,0 +1,43 @@
+page-signup {
+ion-content {
+            background-color: map-get($colors, secondary);
+        }
+ 
+        scroll-content {
+            display: flex;
+            flex-direction: column;
+        }
+ 
+
+        ion-list {
+            margin: 0;
+        }
+ 
+        .heading-text {
+            flex: 1;
+            align-items: center;
+            text-align: center;
+        }
+ 
+        .heading-text h3 {
+            color: #fff;
+        }
+ 
+         ion-row {
+            align-items: center;
+            text-align: center;
+        }
+        .account-form {
+            flex: 1;
+        }
+ 
+        .continue-button {
+            margin-top: 2em;
+            font-size: 1.2em;
+            background-color: deepskyblue;
+        }
+    .go-back-button {
+        text-decoration: underline;
+
+    }
+}

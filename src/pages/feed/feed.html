@@ -1,0 +1,95 @@
+<!--
+  Generated template for the FeedPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+
+
+    <ion-col col-6>
+
+      <ion-list>
+        <ion-item *ngFor="let name of names">
+            {{name.Name}}
+        </ion-item>
+      </ion-list>
+
+            </ion-col>
+
+    <ion-col col-6>
+
+      <ion-list>
+        <ion-item *ngFor="let name of names">
+            {{name.Name}}
+        </ion-item>
+      </ion-list>
+
+    </ion-col>
+
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feeds</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<ion-list>
+        <!--
+            <ng-container *ngFor="let imag of images; let i = index">
+                <ng-container *ngIf="(i == 0) || imag[0].mac != imag[i].mac">
+                <ion-scroll  scrollY="true" style="width: 50%; height: 100%;">
+                <ion-img style="width: 100%; height: auto;" src="http://blog.biletbayi.com/wp-content/uploads/2017/12/Sligo-Gezilecek-Yerler-696x461.jpg"></ion-img>
+                </ion-scroll>
+                </ng-container>    
+            </ng-container> -->
+    
+        <ion-scroll *ngFor="let mac of groupimage" scrollY="true" style="width: 50%; height: 100%;">
+
+            <div *ngFor="let imag of mac.value">
+               <div>{{imag.url}}</div>
+                <ion-img style="width: 100%; height: auto;" src="https://www.oceanfm.ie/wp-content/uploads/2016/06/sligo1.jpg"></ion-img>
+            </div>
+
+        </ion-scroll>
+<!--
+        <ion-scroll *ngFor="let image of images" scrollY="true" style="width: 50%; height: 100%;">
+
+            <div *ngFor="let imag of image.image">
+                <ion-img style="width: 100%; height: auto;" src="www.oceanfm.ie/wp-content/uploads/2016/06/sligo1.jpg"></ion-img>
+            </div>
+
+        </ion-scroll>
+-->
+<!--working code
+        <ion-scroll scrollY="true" style="width: 50%; height: 100%;">
+        <div *ngFor="let image of images">
+                <ion-img style="width: 100%; height: auto;" src={{image.Url}}></ion-img>
+
+        </div>
+        </ion-scroll>
+    
+    <ion-scroll scrollY="true" style="width: 50%; height: 100%;">
+        <div *ngFor="let image of images">
+                <ion-img style="width: 100%; height: auto;" src={{image.Url}}></ion-img>
+
+        </div>
+        </ion-scroll>
+        
+    <ion-scroll scrollY="true" style="width: 50%; height: 100%;">
+        <div *ngFor="let image of images">
+                <ion-img style="width: 100%; height: auto;" src={{image.Url}}></ion-img>
+
+        </div>
+        </ion-scroll>
+  -->  
+    </ion-list>
+</ion-content>
+
+
+
+

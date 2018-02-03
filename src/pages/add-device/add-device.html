@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Device</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-row class="login-form" padding-horizontal>
+            <ion-col>
+                <ion-list inset>
+
+                  <ion-item>
+                    <ion-label color="primary" floating>MAC Address</ion-label>
+                    <ion-input [(ngModel)]="mac" type="text"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="passWord">
+                    <ion-label color="primary" floating>Password</ion-label>
+                    <ion-input [(ngModel)]="password" type="password"></ion-input>
+                  </ion-item>
+                    
+                    <ion-item class="passWord">
+                    <ion-label color="primary" floating>Re-enter Password</ion-label>
+                    <ion-input [(ngModel)]="passwordConfirm" type="password"></ion-input>
+                  </ion-item>
+     <div></div>
+                </ion-list>
+
+                <button ion-button full (click)="addDevice()" class="add-device-button" >Add Device</button>
+
+            </ion-col>
+    </ion-row>
+</ion-content>
