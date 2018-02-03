@@ -9,6 +9,8 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { FeedPage } from '../pages/feed/feed';
+import {ProfilePage} from '../pages/profile/profile';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,7 +22,7 @@ import { IonicStorageModule } from '@ionic/storage';
   declarations: [
     MyApp,
     HelloIonicPage,
-
+    ProfilePage,
     LoginPage,
     SignupPage,
     FeedPage
@@ -35,7 +37,7 @@ import { IonicStorageModule } from '@ionic/storage';
   entryComponents: [
     MyApp,
     HelloIonicPage,
-
+    ProfilePage,
     LoginPage,
     SignupPage,
     FeedPage
@@ -47,7 +49,7 @@ import { IonicStorageModule } from '@ionic/storage';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     TodosProvider,
-    TodosProvider,
+
 
   ]
 })

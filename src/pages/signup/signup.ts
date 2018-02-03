@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 import { AuthProvider } from '../../providers/auth/auth';
 //import { HomePage } from '../home/home';
 import { FeedPage } from '../feed/feed';
+import { ProfilePage } from '../profile/profile'
 
 /**
  * Generated class for the SignupPage page.
@@ -21,7 +22,6 @@ export class SignupPage {
   role: string;
   email: string;
   password: string;
-  fcm_token: string;
 
   constructor(public navCtrl: NavController, public authService: AuthProvider, public navParams: NavParams, public loadingCtrl: LoadingController) {
     
@@ -46,13 +46,13 @@ export class SignupPage {
         email: this.email,
         password: this.password,
         role: this.role,
-        fcm_token: this.fcm_token
     };
     console.log(details);
     this.authService.createAccount(details).then((result) => {
       loading.dismiss();
       console.log(result);
-      this.navCtrl.setRoot(FeedPage);
+      //this.navCtrl.setRoot(FeedPage);
+        this.navCtrl.setRoot(ProfilePage);
     }, (err) => {
         loading.dismiss();
     });

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { IonicPage, NavController, NavParams, AlertController, ModalController, ToastController  } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
-import { SettingProvider } from '../../providers/setting/setting';
 
 @Component({
   selector: 'page-add-device',
@@ -13,7 +12,7 @@ export class AddDevicePage {
     password: string;
     loading: any;
     
-    constructor(public navCtrl: NavController, public settingService: SettingProvider, private toastCtrl: ToastController){
+    constructor(public navCtrl: NavController,  private toastCtrl: ToastController){
     
     }
     
@@ -22,7 +21,7 @@ export class AddDevicePage {
             mac: this.mac,
             password: this.password
         };
-        
+       /* 
         this.settingService.addDevice(details).then((result) => {
             //this.presentToast('successfully added'); 
             this.toastSuccess();
@@ -37,7 +36,7 @@ export class AddDevicePage {
             //this.presentToast(err.error);
             //this.navCtrl.pop();
             //console.log(err);
-        });
+        });*/
     }
 
     presentToast() {

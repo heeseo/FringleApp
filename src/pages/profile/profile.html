@@ -1,12 +1,88 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Profile</ion-title>
+ 
+  <ion-navbar color="primary">
+    <ion-title>Set Profile</ion-title>
   </ion-navbar>
+ 
 </ion-header>
+ 
+ 
+<ion-content padding>
+ 
+    <ion-row class="account-form">
+        <ion-col>
+            <ion-list inset>
+ 
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="userId"></ion-icon> User ID</ion-label>
+                    <ion-input [(ngModel)]="userID" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="fName"></ion-icon> First Name</ion-label>
+                    <ion-input [(ngModel)]="fName" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="lName"></ion-icon> Last Name</ion-label>
+                    <ion-input [(ngModel)]="lName" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label color="primary">Date of Birth</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dob">
+                  </ion-datetime>
+                </ion-item>
+                <ion-item>
+                  <ion-label color="primary">Gender</ion-label>
+                  <ion-select [(ngModel)]="gender">
+                    <ion-option value="female">Female</ion-option>
+                    <ion-option value="male">Male</ion-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>
+                  <ion-label color="primary">Status</ion-label>
+                  <ion-select [(ngModel)]="status">
+                    <ion-option value="single">Single</ion-option>
+                    <ion-option value="married">Married</ion-option>
+                  </ion-select>
+                </ion-item> 
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="city"></ion-icon> City</ion-label>
+                    <ion-input [(ngModel)]="city" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="county"></ion-icon> County</ion-label>
+                    <ion-input [(ngModel)]="county" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="country"></ion-icon> Country</ion-label>
+                    <ion-input [(ngModel)]="country" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="hobbies"></ion-icon> Hobbies</ion-label>
+                    <ion-input [(ngModel)]="hobbies" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label color="primary" floating><ion-icon name="details"></ion-icon> Details</ion-label>
+                    <ion-input [(ngModel)]="details" type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label color="primary">Interested in</ion-label>
+                  <ion-select [(ngModel)]="interest">
+                    <ion-option value="boys">Any</ion-option>
+                    <ion-option value="girls">Girls</ion-option>
+                    <ion-option value="boys">Boys</ion-option>
+                  </ion-select>
+                </ion-item> 
+                
+ 
+ 
+            </ion-list>
+ 
+            <button ion-button full (click)="setProfile()" class="continue-button">Register</button>
+            
+             <button ion-button round clear (click)="skip()" class="skip-button">Skip</button>
 
-<ion-content>
-    <button ion-button color="primary" menuToggle>Profile</button>
+ 
+        </ion-col>
+    </ion-row>
+ 
 </ion-content>

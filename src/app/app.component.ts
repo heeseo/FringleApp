@@ -6,6 +6,7 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 //import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { AuthProvider } from '../providers/auth/auth';
+import {ProfilePage} from '../pages/profile/profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
