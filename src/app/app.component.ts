@@ -3,7 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-//import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { AuthProvider } from '../providers/auth/auth';
 import {ProfilePage} from '../pages/profile/profile';
@@ -62,4 +62,7 @@ export class MyApp {
     this.nav.setRoot(LoginPage);
       
   }
+    setProfile(){
+        this.nav.push(ProfilePage)
+    }
 }

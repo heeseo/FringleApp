@@ -16,7 +16,7 @@
       <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
-      <button ion-item><ion-icon name="contact"></ion-icon> Profile</button>  
+      <button ion-item (click)="setProfile()"><ion-icon name="contact"></ion-icon> Profile</button>  
     </ion-list>
   </ion-content>
 </ion-menu>
