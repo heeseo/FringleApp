@@ -4,6 +4,8 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { HomePage } from '../pages/home/home';
+import{ListPage} from '../pages/list/list';
+import{GroupInfoPage} from '../pages/group-info/group-info';
 import { LoginPage } from '../pages/login/login';
 import { AuthProvider } from '../providers/auth/auth';
 import {ProfilePage} from '../pages/profile/profile';

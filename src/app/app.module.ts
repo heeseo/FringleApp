@@ -10,7 +10,8 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { FeedPage } from '../pages/feed/feed';
 import {ProfilePage} from '../pages/profile/profile';
-
+import { HomePage } from '../pages/home/home';
+import{GroupInfoPage} from '../pages/group-info/group-info';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
