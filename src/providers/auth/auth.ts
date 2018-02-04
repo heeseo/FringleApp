@@ -72,9 +72,9 @@ export class AuthProvider {
  
     return new Promise((resolve, reject) => {
  
-        let headers = new HttpHeaders();
-        headers.append('Content-Type', 'application/json');
- 
+       // let headers = new HttpHeaders();
+     //  headers.append('Content-Type', 'application/json');
+        const headers = new HttpHeaders().set('Content-Type', 'application/json').append('Authorization', this.token);
         this.http.post('http://10.101.0.133:3000/api/auth/setProfile', details, {headers: headers})
           .subscribe(res => {
             resolve(res);
@@ -93,7 +93,6 @@ export class AuthProvider {
  
         let headers = new HttpHeaders();
         headers.append('Content-Type', 'application/json');
- 
         this.http.post('http://10.101.0.133:3000/api/auth/login', credentials, {headers: headers})
           .subscribe(res => {
  

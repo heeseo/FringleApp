@@ -44,8 +44,8 @@ export class ProfilePage {
       
     let details = {
         useID: this.userID,
-          fName: this.fName,
-          lName: this.lName,
+          fname: this.fName,
+          lname: this.lName,
           dob: this.dob,
           gender: this.gender,
           status: this.status,
