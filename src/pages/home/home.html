@@ -20,20 +20,24 @@
   
   <ion-slides pager>
 
-    <ion-slide (click)="openModal()">
-        <ion-card>
+    <ion-slide>
+        <ion-card (click)="openModal()">
             <ion-card-title>
                 Group 1
                 </ion-card-title>
         <img src="https://az616578.vo.msecnd.net/files/2016/08/15/6360682710224914221617167464_bigstock-Group-Of-Friends-Having-Fun-To-58863776.jpg"/>
         <ion-card-content>
           <p>
-            Group 1 description
+            Group 1 Description
           </p>
         </ion-card-content>
       </ion-card>
+      <button ion-button icon-start (click)="makeToast()">
+        <ion-icon name="hand"></ion-icon>
+        WAVE!
+      </button>
     </ion-slide>
-  
+    
     <ion-slide (click)="openModal()">
       <ion-card><ion-card-title>
           Group 2

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, ToastController
 import { AuthProvider } from '../../providers/auth/auth';
 //import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
+import { FeedPage } from '../feed/feed';
 import { HomePage } from '../home/home';
 
 /**
