@@ -10,11 +10,7 @@ import {CreateGroupPage} from '../create-group/create-group';
 })
 export class HomePage {
 
-<<<<<<< HEAD
-  constructor(private modal: ModalController, private toastCtrl: ToastController) {
-=======
-  constructor(private modal: ModalController, public navCtrl: NavController) {
->>>>>>> a011c681bf21e8e3ff9981cac83e57ea0ac083a5
+  constructor(private modal: ModalController, public navCtrl: NavController, public toastCtrl: ToastController) {
 
   }
 

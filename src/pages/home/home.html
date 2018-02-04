@@ -6,7 +6,7 @@
     </button>
     <ion-title>Fringle</ion-title>
 
-    <button ion-button right (click)="createGroup()">
+    <button ion-button menuToggle right>
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-navbar>
@@ -43,18 +43,22 @@
       </button>
     </ion-slide>
     
-    <ion-slide (click)="openModal()">
-      <ion-card><ion-card-title>
-          Group 2
-          </ion-card-title>
+    <ion-slide>
+        <ion-card (click)="openModal()">
+            <ion-card-title>
+                Group 2
+                </ion-card-title>
         <img src="https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2016/08/friends-eating-hotdogs-082216.jpg"/>
         <ion-card-content>
-          
           <p>
-            Group 2 description
+            Group 2 Description
           </p>
         </ion-card-content>
       </ion-card>
+      <button ion-button icon-start (click)="displayChat()">
+        <ion-icon name="chat"></ion-icon>
+        CHAT!
+      </button>
     </ion-slide>
   
     <ion-slide (click)="openModal()">
