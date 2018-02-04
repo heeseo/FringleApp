@@ -1,14 +1,77 @@
-<ion-header>
+﻿<ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Fringle</ion-title>
   </ion-navbar>
+  
+<ion-list>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+</ion-list>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  
+  <ion-slides pager>
+
+    <ion-slide (click)="openModal()">
+        <ion-card>
+            <ion-card-title>
+                Group 1
+                </ion-card-title>
+        <img src="https://az616578.vo.msecnd.net/files/2016/08/15/6360682710224914221617167464_bigstock-Group-Of-Friends-Having-Fun-To-58863776.jpg"/>
+        <ion-card-content>
+          <p>
+            Group 1 description
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  
+    <ion-slide (click)="openModal()">
+      <ion-card><ion-card-title>
+          Group 2
+          </ion-card-title>
+        <img src="https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2016/08/friends-eating-hotdogs-082216.jpg"/>
+        <ion-card-content>
+          
+          <p>
+            Group 2 description
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  
+    <ion-slide (click)="openModal()">
+      <ion-card><ion-card-title>
+          Group 3
+          </ion-card-title>
+        <img src="https://lovelace-media.imgix.net/uploads/820/cb7cc090-5984-0133-9e4a-0af7184f89fb.jpg"/>
+        <ion-card-content>
+          
+          <p>
+            Group 3 description
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide (click)="openModal()">
+        <ion-card><ion-card-title>
+            Group 4
+            </ion-card-title>
+          <img src="https://image.freepik.com/free-photo/group-of-friends-with-a-big-smile_1098-2872.jpg"/>
+          <ion-card-content>
+            
+            <p>
+              Group 4 description
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+  </ion-slides>
+
 </ion-content>

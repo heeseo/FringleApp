@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import {GroupInfoPage} from '../group-info/group-info';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,13 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(private modal: ModalController) {
 
   }
+  
+  openModal() {
+    const myModal =this.modal.create('GroupInfoPage')
+    myModal.present();
+}
 
 }
