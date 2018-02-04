@@ -20,7 +20,7 @@ ion-content {
         }
  
         .heading-text h3 {
-            color: #fff;
+            color : "primary";
         }
  
          ion-row {
@@ -34,7 +34,7 @@ ion-content {
         .continue-button {
             margin-top: 2em;
             font-size: 1.2em;
-            background-color: deepskyblue;
+            // background-color: "secondary";
         }
     .go-back-button {
         text-decoration: underline;

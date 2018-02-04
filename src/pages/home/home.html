@@ -6,7 +6,7 @@
     </button>
     <ion-title>Fringle</ion-title>
 
-    <button ion-button right (click)="createGroup()">
+    <button ion-button menuToggle right (click)="createGroup()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-navbar>
@@ -25,61 +25,75 @@
   
   <ion-slides pager>
 
-    <ion-slide (click)="openModal()">
-        <ion-card>
+    <ion-slide>
+        <ion-card (click)="openModal()">
             <ion-card-title>
                 Group 1
                 </ion-card-title>
         <img src="https://az616578.vo.msecnd.net/files/2016/08/15/6360682710224914221617167464_bigstock-Group-Of-Friends-Having-Fun-To-58863776.jpg"/>
         <ion-card-content>
           <p>
-            Group 1 description
+            Group 1 Description
           </p>
         </ion-card-content>
       </ion-card>
+      <button ion-button icon-start (click)="makeToast()">
+        <ion-icon name="hand"></ion-icon>
+        WAVE!
+      </button>
     </ion-slide>
-  
-    <ion-slide (click)="openModal()">
-      <ion-card><ion-card-title>
-          Group 2
-          </ion-card-title>
+    <ion-slide>
+        <ion-card (click)="openModal()">
+            <ion-card-title>
+                Group 2
+                </ion-card-title>
         <img src="https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2016/08/friends-eating-hotdogs-082216.jpg"/>
         <ion-card-content>
-          
           <p>
-            Group 2 description
+            Group 2 Description
           </p>
         </ion-card-content>
       </ion-card>
+      <button ion-button icon-start (click)="makeToast()">
+        <ion-icon name="hand"></ion-icon>
+        WAVE!
+      </button>
     </ion-slide>
-  
-    <ion-slide (click)="openModal()">
-      <ion-card><ion-card-title>
-          Group 3
-          </ion-card-title>
+    <ion-slide>
+        <ion-card (click)="openModal()">
+            <ion-card-title>
+                Group 3
+                </ion-card-title>
         <img src="https://lovelace-media.imgix.net/uploads/820/cb7cc090-5984-0133-9e4a-0af7184f89fb.jpg"/>
         <ion-card-content>
-          
           <p>
-            Group 3 description
+            Group 3 Description
           </p>
         </ion-card-content>
       </ion-card>
+      <button ion-button icon-start (click)="makeToast()">
+        <ion-icon name="hand"></ion-icon>
+        WAVE!
+      </button>
     </ion-slide>
-
-    <ion-slide (click)="openModal()">
-        <ion-card><ion-card-title>
-            Group 4
-            </ion-card-title>
-          <img src="https://image.freepik.com/free-photo/group-of-friends-with-a-big-smile_1098-2872.jpg"/>
-          <ion-card-content>
-            
-            <p>
-              Group 4 description
-            </p>
-          </ion-card-content>
-        </ion-card>
-      </ion-slide>
+    <ion-slide>
+        <ion-card (click)="openModal()">
+            <ion-card-title>
+                Group 4
+                </ion-card-title>
+        <img src="https://image.freepik.com/free-photo/group-of-friends-with-a-big-smile_1098-2872.jpg"/>
+        <ion-card-content>
+          <p>
+            Group 4 Description
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <button ion-button icon-start (click)="makeToast()">
+        <ion-icon name="hand"></ion-icon>
+        WAVE!
+      </button>
+    </ion-slide>
+    
   </ion-slides>
     
 <ion-fab bottom right >
