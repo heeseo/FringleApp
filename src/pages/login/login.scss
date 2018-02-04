@@ -1,7 +1,8 @@
 page-login {
     .login-content {
-        background-image: url("src\assets\imgs\LogoR2.PNG")
+        // background-image: url("../../assets/imgs/LogoR2.PNG");
     }
+
     
     .item{
  
@@ -18,7 +19,7 @@ page-login {
         max-width: 80%;
         margin: auto;
         display: block;
-        background-color: white;
+
     }
         
         ion-row {
@@ -34,7 +35,7 @@ page-login {
         .create-account {
             
             text-decoration: underline;
-            background-color: transparent;
+            // background-color: transparent;
 
         }
     
