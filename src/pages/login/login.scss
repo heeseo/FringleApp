@@ -1,5 +1,6 @@
 page-login {
     .login-content {
+        background-image: url("src\assets\imgs\LogoR2.PNG")
     }
     
     .item{
@@ -34,6 +35,7 @@ page-login {
             
             text-decoration: underline;
             background-color: transparent;
+
         }
     
  
@@ -41,7 +43,9 @@ page-login {
         .login-button {
             margin-top: 2em;
             font-size: 1.2em;
-            background-color: deepskyblue;
+            //background-color: rgb(255, 0, 0);
+            //background-color:secondary;
+            // background-color: deepskyblue;
         }
  
 }
