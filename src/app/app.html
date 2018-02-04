@@ -12,6 +12,12 @@
       </button>
       <button ion-item (click)="logout()"><ion-icon name="power"></ion-icon> Log out</button>  
     </ion-list>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+      <button ion-item><ion-icon name="contact"></ion-icon> Profile</button>  
+    </ion-list>
   </ion-content>
 </ion-menu>
 <ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>
