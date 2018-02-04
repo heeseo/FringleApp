@@ -13,9 +13,7 @@ export class HomePage {
   constructor(private modal: ModalController, public navCtrl: NavController, public toastCtrl: ToastController) {
 
   }
-  displayChat(){
-    
-  }
+  
   makeToast() {
     let toast = this.toastCtrl.create({
       message: 'Wave Sent Successfully',
