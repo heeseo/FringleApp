@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
-//import { HomePage } from '../home/home';
 import { FeedPage } from '../feed/feed';
+import { HomePage } from '../home/home';
+
 
 @Component({
   selector: 'page-profile',
@@ -61,7 +62,7 @@ export class ProfilePage {
       loading.dismiss();
       console.log(result);
       //this.navCtrl.setRoot(FeedPage);
-        this.navCtrl.setRoot(FeedPage);
+        this.navCtrl.setRoot(HomePage);
     }, (err) => {
         loading.dismiss();
     });
@@ -69,7 +70,7 @@ export class ProfilePage {
   }
 
     skip(){
-        this.navCtrl.setRoot(FeedPage);        
+        this.navCtrl.setRoot(HomePage);        
     }
  
   showLoader(){

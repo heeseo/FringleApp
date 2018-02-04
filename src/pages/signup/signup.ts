@@ -52,7 +52,7 @@ export class SignupPage {
       loading.dismiss();
       console.log(result);
       //this.navCtrl.setRoot(FeedPage);
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(ProfilePage);
     }, (err) => {
         loading.dismiss();
     });
