@@ -4,7 +4,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 //import { HomePage } from '../home/home';
 import { FeedPage } from '../feed/feed';
 import { ProfilePage } from '../profile/profile'
-
+import { HomePage } from '../home/home';
 /**
  * Generated class for the SignupPage page.
  *
@@ -52,7 +52,7 @@ export class SignupPage {
       loading.dismiss();
       console.log(result);
       //this.navCtrl.setRoot(FeedPage);
-        this.navCtrl.setRoot(ProfilePage);
+        this.navCtrl.setRoot(HomePage);
     }, (err) => {
         loading.dismiss();
     });

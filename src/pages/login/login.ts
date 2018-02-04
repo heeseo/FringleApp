@@ -4,7 +4,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 //import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 import { FeedPage } from '../feed/feed';
-
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -53,7 +53,7 @@ export class LoginPage {
         this.authService.login(credentials).then((result) => {
             this.loading.dismiss();
             console.log(result);
-            this.navCtrl.setRoot(FeedPage);
+            this.navCtrl.setRoot(HomePage);
             this.toastSuccess();
 
         }, (err) => {
