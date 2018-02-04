@@ -113,5 +113,39 @@ export class AuthProvider {
   logout(){
     this.storage.set('token', '');
   }
+
+    createGroup(details){
+        return new Promise((resolve, reject) => {
+
+           // let headers = new HttpHeaders();
+         //  headers.append('Content-Type', 'application/json');
+            const headers = new HttpHeaders().set('Content-Type', 'application/json').append('Authorization', this.token);
+            this.http.post('http://10.101.0.133:3000/api/auth/createGroup', details, {headers: headers})
+              .subscribe(res => {
+                resolve(res);
+
+              }, (err) => {
+                reject(err);
+              });
+
+        });        
+    }
+
+    join(details){
+        return new Promise((resolve, reject) => {
+
+           // let headers = new HttpHeaders();
+         //  headers.append('Content-Type', 'application/json');
+            const headers = new HttpHeaders().set('Content-Type', 'application/json').append('Authorization', this.token);
+            this.http.post('http://10.101.0.133:3000/api/auth/joinGroup', details, {headers: headers})
+              .subscribe(res => {
+                resolve(res);
+
+              }, (err) => {
+                reject(err);
+              });
+
+        });        
+    }
      
 }

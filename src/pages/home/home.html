@@ -81,5 +81,14 @@
         </ion-card>
       </ion-slide>
   </ion-slides>
+    
+<ion-fab bottom right >
+   <button ion-fab><ion-icon name="add"></ion-icon></button>
+   <ion-fab-list side="top">
+     <button ion-fab (click)="createGroup()">Create</button>
+     <button ion-fab (click)="shareGroup()">Share</button>
+     <button ion-fab (click)="joinGroup()">Join</button>
+   </ion-fab-list>
+ </ion-fab>
 
 </ion-content>

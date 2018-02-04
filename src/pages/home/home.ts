@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import {GroupInfoPage} from '../group-info/group-info';
-import {CreateGroupPage} from '../create-group/create-group';
+import {JoinGroupPage} from '../join-group/join-group';
+import {ShareGroupPage} from '../share-group/share-group';
 
 
 @Component({
@@ -22,6 +23,16 @@ export class HomePage {
     createGroup(){
         this.navCtrl.push('CreateGroupPage');
                
+    }
+    
+    joinGroup(){
+        this.navCtrl.push('JoinGroupPage');
+        
+    }
+    
+    shareGroup(){
+        this.navCtrl.push('ShareGroupPage');
+        
     }
 
 }

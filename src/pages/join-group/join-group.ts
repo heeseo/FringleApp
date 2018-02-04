@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,LoadingController, ToastController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
-import { HomePage } from '../home/home';
 
 
 /**
- * Generated class for the CreateGroupPage page.
+ * Generated class for the JoinGroupPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,35 +12,25 @@ import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-create-group',
-  templateUrl: 'create-group.html',
+  selector: 'page-join-group',
+  templateUrl: 'join-group.html',
 })
-export class CreateGroupPage {
-
-    name: string;
-    status: string;
-    description: string;
-    interests: string;
-    area: string;
+export class JoinGroupPage {
+    accessKey: string;
   constructor(public navCtrl: NavController, public navParams: NavParams,public authService: AuthProvider, public loadingCtrl: LoadingController,
-    private toastCtrl: ToastController,) {
+    private toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CreateGroupPage');
+    console.log('ionViewDidLoad JoinGroupPage');
   }
     
-    createGroup(){
-
+    join(){
         let details = {
-            groupName: this.name,
-            status: this.status,
-            description: this.description,
-            interests: this.interests,
-            area: this.area
+            accessKey: this.accessKey
         };
-       
-        this.authService.createGroup(details).then((result) => {
+        
+        this.authService.join(details).then((result) => {
             //this.presentToast('successfully added'); 
             this.toastSuccess();
             this.navCtrl.pop();
@@ -55,13 +44,11 @@ export class CreateGroupPage {
             //this.presentToast(err.error);
             //this.navCtrl.pop();
             //console.log(err);
-        });    
+        });        
     }
-
-    toastSuccess() {
-
+    presentToast() {
       let toast = this.toastCtrl.create({
-        message: "Successfully created Group",
+        message: "Failed to add",
         duration: 3000,
         position: 'middle'
       });
@@ -73,9 +60,9 @@ export class CreateGroupPage {
       toast.present();
     }
 
-    presentToast() {
+    toastSuccess() {
       let toast = this.toastCtrl.create({
-        message: "Failed to create",
+        message: "Successfully added",
         duration: 3000,
         position: 'middle'
       });
