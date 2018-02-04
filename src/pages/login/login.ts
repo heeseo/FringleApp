@@ -34,7 +34,7 @@ export class LoginPage {
         this.authService.checkAuthentication().then((res) => {
             console.log("Already authorized");
             this.loading.dismiss();
-            this.navCtrl.setRoot(FeedPage);
+            this.navCtrl.setRoot(HomePage);
         }, (err) => {
             console.log("Not already authorized");
             this.loading.dismiss();

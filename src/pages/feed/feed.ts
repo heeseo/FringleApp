@@ -48,30 +48,10 @@ export class FeedPage {
         this.groupimage = this.transformArray(this.imagedata, "mac");*/
   }
 
-transformArray(array: Array<any>, field) {
-    if (array) {
-      const groupedObj = array.reduce((prev, cur) => {
-        if (!prev[cur[field]]) {
-          prev[cur[field]] = [cur];
-        } else {
-          prev[cur[field]].push(cur);
-        }
-        return prev;
-      }, {});
-      return Object.keys(groupedObj).map(key => ({ key, value: groupedObj[key] }));
-    }
-    return [];
-  }
+
 
   ionViewDidLoad() {
-      
-    this.todoService.getTodos().then((data) => {
-          this.images = data;
-        this.groupimage = this.transformArray(this.images, "mac");
-    }, (err) => {
-        console.log("not allowed");
-    });
-      console.log(this.groupimage);
+
   }
 
 }
