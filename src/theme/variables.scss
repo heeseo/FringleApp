@@ -5,6 +5,9 @@
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
 
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
 
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
@@ -55,6 +58,8 @@ $colors: (
 $background-color:           #000000;
 $toolbar-md-title-text-color: #B21212;
 $toolbar-md-title-font-size: 3rem;
+// $toolbar-md-title-fontfamily: "Josefin+Sans";
+
 
 
 // App Windows Variables
